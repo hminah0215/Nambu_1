@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어쿼리 실습</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+
+        /* 브라우저 창 width 가 300px 까지는 div가 skyblue 색으로 */
+        @media screen and (max-width:300px) {
+            div {
+                background: skyblue;
+            }
+        }
+        /* 브라우저 창 width 가 300px ~ 450px 까지는 div가 orange 색으로 */
+        @media screen and (min-width: 300px) and (max-width:450px) {
+            div {
+                background: orange;
+            }
+        }
+        /* 브라우저 창 width 가 600px(그 이상) 까지는 div가 greenyellow 색으로 달라진다*/
+        @media screen and (min-width: 600px) {
+            div {
+                background: greenyellow;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>미디어 쿼리 예제</h1>
+    <div>반응형 색상! width 크기에 따라 색상이 달라진다ㅏㅏㅏㅏㅏ</div>
+</body>
+
+</html>

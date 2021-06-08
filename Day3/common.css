@@ -1,0 +1,71 @@
+/* 5. 주 메뉴 스타일 적용*/
+.header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid lightgray;
+  background: #ffffff;
+}
+
+.header li {
+  float: left;
+}
+.header li:last-child {
+  float: right;
+}
+/* 6. 주 메뉴 링크스타일 적용*/
+.header li a {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 16px;
+  color: #242c42;
+}
+
+.header li a.active {
+  color: white;
+  background: lightseagreen;
+}
+
+/*home 메뉴는 제외하고 다른 주 메뉴에 마우스를 올리면 배경색 변경*/
+.header li a:hover:not(.active) {
+  background: skyblue;
+}
+
+/* 7. 하위 메뉴 스타일 적용*/
+.header .dropdown_content {
+  position: absolute;
+  min-width: 160px;
+  background: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  display: none;
+}
+.header .dropdown:hover .dropdown_content {
+  display: block;
+}
+.header .dropdown_content a {
+  color: black;
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+}
+
+/* 8. 로그인 하위 메뉴 스타일*/
+.header .dropdown_content input {
+  width: 100px;
+  color: black;
+  padding: 12px 30px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+/* 9. 바닥글 영역 스타일 구성*/
+.footer {
+  clear: both;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid darkgray;
+  border-radius: 5px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 사이트 만들기 실습1</title>
+    <!-- 5~9번 css 적용은 외부 common.css 시트에 있음-->
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+    <!--1.기본 레이아웃-->
+    <div class="header">
+        <!--2. 주 메뉴 구성-->
+        <ul>
+            <li><a class="active" href="index.html">HOME</a></li>
+            <li><a href="#">영화뉴스</a></li>
+            <!--3. 하위 메뉴 구성-->
+            <li class="dropdown"><a class="dropbtn" href="#">영화정보</a>
+                <div class="dropdown_content">
+                    <a href="#">박스오피스</a>
+                    <a href="#">영화리뷰</a>
+                </div>
+            </li>
+            <li class="dropdown"><a class="dropbtn" href="#">sf영화</a>
+                <div class="dropdown_content">
+                    <a href="#">스타워즈</a>
+                    <a href="#">에일리언</a>
+                    <a href="#">스타트렉</a>
+                </div>
+            </li>
+            <li class="dropdown"><a class="dropbtn" href="#">로그인</a>
+                <div class="dropdown_content">
+                    <input type="text" name="username" id="username" placeholder="아이디 입력">
+                    <input type="password" name="pwd" id="pwd" placeholder="비밀번호 입력">
+                    <a href="#" id="login">login</a>
+
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="content"></div>
+    <div class="footer">
+        <!--4. 바닥글 구성 -->
+        <address>주식회사 남부발전센터 / 서울시 금천구 여기가 무슨동이지</address>
+        <h4>대표이사: 현땡땡/ 사업자 등록 번호 : 123-45-67890/ 등록일자 2021년 06월 08일 / 편집인 현땡땡 / 발행일자 2021년 06월 08일<br>
+            <a href="mailto:a@outlook.com">메일보내기</a> /이 사이트의 모든 권리는 제작사에게 있습니다.</h4>
+    </div>
+</body>
+
+</html>

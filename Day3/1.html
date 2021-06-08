@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition-timing-function</title>
+    <style>
+        .main {
+            height: 300px;
+            position: relative;
+            color: white;
+            border: 1px solid navy;
+        }
+
+        .main .box{
+            position: absolute;
+            bottom: 0;
+            width: 100px;
+            height: 100px;
+            background: rebeccapurple;
+        }
+        /* box별로 left 값을 줘서 박스가 안겹치게! */
+        .main .box.default{
+            left: 39px;
+            background: goldenrod;
+        }
+        .main .box.linear {
+            left: 149px;
+            transition-timing-function: linear;
+        }
+
+        .main .box.ease-in {
+            left: 259px;
+            transition-timing-function: ease-in;
+        }
+
+        .main .box.ease-out {
+            left: 369px;
+            transition-timing-function: ease-out;
+        }
+
+        .main .box.ease-in-out {
+            left: 479px;
+            transition-timing-function: ease-in-out;
+        }
+
+        .main .box.cubic-bezier {
+            left: 589px;
+            transition-timing-function: cubic-bezier(0, 1, 1, 0)
+        }
+
+        .main:hover .box {
+            transition-duration: 2s;
+            bottom: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box default"></div>
+        <div class="box linear"></div>
+        <div class="box ease-in"></div>
+        <div class="box ease-out"></div>
+        <div class="box ease-in-out"></div>
+        <div class="box cubic-bezier"></div>
+    </div>
+</body>
+
+</html>
