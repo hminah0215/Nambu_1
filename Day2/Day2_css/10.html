@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>형제 선택자</title>
+    <style>
+        /* 인접 형제 선택자 */
+        h2+p{
+            color: white;
+            background: blue;
+        }
+        /* 일반 형제 선택자 */
+        #gb > h2 ~ p{
+            color: red;
+            background: grey;
+        }
+    </style>
+</head>
+<body>
+    <h1>인접 형제 선택자</h1>
+    <div>
+        <h2>장남</h2>
+        <p>둘째</p>
+        <a href="#">셋째</a>
+        <p>막내</p>
+    </div>
+    <hr>
+    <h1>일반 형제 선택자</h1>
+    <div id="gb">
+        <p>장녀</p>
+        <h2>둘째</h2>
+        <p>셋째</p>
+        <a href="#">넷째</a>
+        <p>막내 딸</p>
+    </div>
+</body>
+</html>

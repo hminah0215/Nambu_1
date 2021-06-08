@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>속성 선택자</title>
+    <style>
+        a[href]{color: white;}
+        a[href="www.yes24.com"]{background: green;}
+        a[href*="yes24"]{background: yellow;}
+        a[href^="http"]{background: blue;}
+        a[href$="kr"]{background: purple;}
+    </style>
+</head>
+<body>
+    <a href="www.yes24.com">yes24</a>
+    <a href="http://www.yes24.com">yes 24 url</a>
+    <a href="www.google.co.kr">google korea</a>
+    <a href="www.daum.net">daum</a>
+</body>
+</html>

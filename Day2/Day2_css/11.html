@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 우선순위</title>
+    <style>
+        div > p.one{
+            background: blue !important;
+            color: white !important;
+        }
+
+        p#three{
+            background: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS 우선순위</h1>
+    <div>
+        <p id="three" class="one two" style="background: yellow; color: black;">우선 순위</p>
+        <p>우선 순위 낮음</p>
+    </div>
+</body>
+</html>
