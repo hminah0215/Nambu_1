@@ -44,7 +44,7 @@
         /* 15. 이미지 슬라이드 네비게이션 마크 */
         .slide-nav label{
             width: 100px;
-            height: 100px;
+            height: 100%;
             position: absolute;
             display: none;
             opacity: 0;
@@ -57,6 +57,100 @@
             line-height: 420px; /* 부모의 높이만큼의 값을 주면, 그 높이의 중간을 잡아 위치 */
             background: rgba(255, 255, 255, 0.3);
             text-shadow: 0px 0px 15px rgb(119, 119, 119);
+        }
+
+        /* 16. 슬라이드 네비게이션 동작 */
+        input:checked + .slide-container .slide{
+            opacity: 1;
+            transform: scale(1);
+            transition: opacity 1s ease-in-out;
+        }
+        input:checked + .slide-container .slide-nav label{
+            display: block;
+        }
+        .slide:hover + .slide-nav label{
+            opacity: 0.5;
+        }
+        .slide-nav label:hover{
+            opacity: 1;
+        }
+        .slide-nav .next{
+            right: 0;
+        }
+
+        /* 17. 이벤트와 탭 메뉴 영역 */
+        @media screen and (max-width:800px) {
+            .content, .footer{
+                width: 900px;
+            }
+        }
+        @media screen and (max-width:1280px) {
+            .content, .footer{
+                width: 1350px;
+            }
+        }
+        .content .events{
+            float: left;
+            width: 50%;
+            margin-left: 10%;
+        }
+        .content h2{text-align: center;}
+        .content .tab_box{
+            float: left;
+            width: 30%;
+            margin-right: 10%;
+            margin-top: 25px;
+            margin-bottom: 100px;
+        }
+        /* 18. 탭 버튼 선택 동작 */
+        #boxoffice_tab{
+            display: none;
+        }
+        #boxoffice_tab ~ div:nth-of-type(2){
+            /* #boxoffice_tab의 일반 형제 div 중에서 2번째 div .tab_item */
+            display: none;
+        }
+        #boxoffice_tab:checked ~ div:nth-of-type(2){
+            display: block;
+        }
+        #planned_tab{
+            display: none;
+        }
+        #planned_tab ~ div:nth-of-type(3){
+            display: none;
+        }
+        #planned_tab:checked ~ div:nth-of-type(3){
+            display: block;
+        }
+        /* 19. 탭 버튼 및 탭 항목 모양 구성 */
+        .tab_buttons{
+            overflow: hidden;
+        }
+        .tab_buttons > label{
+            display: block;
+            float: left;
+            width: 175px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            background: white;
+            color: black;
+        }
+        #boxoffice_tab:checked ~ .tab_buttons > label:nth-of-type(1){
+            background: black;
+            color: white;
+        }
+        #planned_tab:checked ~ .tab_buttons > label:nth-of-type(2){
+            background: black;
+            color: white;
+        }
+        .tab_item{
+            overflow: hidden;
+            height: 180px;
+            width: 348px;
+            border: 1px solid black;
         }
     </style>
     
