@@ -1,13 +1,65 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>웹 사이트 만들기 실습1</title>
-    <!-- 5~9번 css 적용은 외부 common.css 시트에 있음-->
+    <!-- 5 ~ 9번 css 적용은 외부 common.css 시트에 있음-->
     <link rel="stylesheet" href="common.css">
+    <style>
+        /* 13. 이미지슬라이드 전체 레이아웃 */
+        .img-slide{
+            margin: 40px 0 40px 0;
+        }
+        .slides{
+            padding: 0;
+            width: 809px;
+            height: 420px;
+            display: block;
+            margin: 0 auto; /* 마진 이렇게 주면 가로 중앙정렬 */
+            position: relative;
+            overflow: hidden;       
+        }
+        .slides input{
+            display: none;
+        }
+        /* 14. 슬라이드 이미지 레이아웃 */
+        .slide-container{display: block;}
+        .slide{
+            top: 0;
+            width: 809px;
+            height: 420px;
+            display: block;
+            position: absolute;
+            transform: scale(0);
+            transition: all 0.7s ease-in-out;
+            opacity: 0; /* 투명도 */
+        }
+        .slide img{
+            width: 100%;
+            height: 100%; /* 부모의 사이즈를 그대로 따라가도록 */
+        }
+
+        /* 15. 이미지 슬라이드 네비게이션 마크 */
+        .slide-nav label{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            display: none;
+            opacity: 0;
+            z-index: 1;
+            cursor: pointer;
+            transition: opacity .2s;
+            color: #FFF;
+            font-size: 150px;
+            text-align: center;
+            line-height: 420px; /* 부모의 높이만큼의 값을 주면, 그 높이의 중간을 잡아 위치 */
+            background: rgba(255, 255, 255, 0.3);
+            text-shadow: 0px 0px 15px rgb(119, 119, 119);
+        }
+    </style>
+    
 </head>
 
 <body>
@@ -102,8 +154,34 @@
             <a href="#"><img src="img/movie_event4.jpg" alt=""/></a>
         </div>
 
-        <!-- 12. 박스오피스 / 상영예정작 -->
-        <div></div>
+        <!-- 12. 탭으로 박스오피스 / 상영예정작 -->
+        <div class="tab_box">
+            <input type="radio" name="tab" id="boxoffice_tab" checked>
+            <input type="radio" name="tab" id="planned_tab">
+            <!--탭 버튼 영역-->
+            <div class="tab_buttons">
+                <label for="boxoffice_tab">박스오피스</label>
+                <label for="planned_tab">상영예정작</label>
+            </div>
+            <!--박스오피스-->
+            <div class="tab_item">
+                <ol class="item">
+                    <li><strong class="tit">캐시트럭</strong></li>
+                    <li><span class="tit">크루엘라</span></li>
+                    <li><span class="tit">컨저링3</span></li>
+                    <li><span class="tit">모교</span></li>
+                </ol>
+            </div>
+            <!--상영예정작-->
+            <div class="tab_item">
+                <ul class="item">
+                    <li><span class="tit">콰이어트 플레이스2</span></li>
+                    <li><span class="tit">킬러들의 보디가드2</span></li>
+                    <li><span class="tit">청춘선거</span></li>
+                    <li><span class="tit">클라이밍</span></li>
+                </ul>
+            </div>
+        </div>
     </div>
     <div class="footer">
         <!--4. 바닥글 구성 -->
