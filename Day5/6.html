@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>네비게이션 토글 바</title>
+</head>
+
+<body>
+    <!--jquery, bootstrap js-->
+    <script src="js/jquery-3.6.0.slim.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--brand-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a href="#" class="navbar-brand">SF Mania</a>
+        <!--토글 바 버튼영역 코드-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!--토글 바 버튼 하위 구성요소 추가-->
+            <ul class="navbar-nav">
+                <li class="nav-item active"><a href="#" class="nav-link">HOME</a></li>
+
+                <!--드롭다운 메뉴 추가, 왜 안될까....?????-->
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">Starwars</a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Starwars Episode1</a>
+                        <a href="#" class="dropdown-item">Starwars Episode2</a>
+                        <a href="#" class="dropdown-item">Starwars Episode3</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">Starwars Episode4</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link">Star Treck</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Star Gate</a></li>
+            </ul>
+            <!--검색 상자 추가-->
+            <form class="form-inline">
+                <input type="search" class="form-control mr-sm-2" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button>
+            </form>
+        </div>
+    </nav>
+
+</body>
+
+</html>
