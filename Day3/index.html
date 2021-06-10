@@ -41,12 +41,76 @@
             </li>
         </ul>
     </div>
-    <div class="content"></div>
+    <div class="content">
+        <!-- 10. 이미지 슬라이드 작업 -->
+        <div class="img-slides">
+
+            <!--이미지 목록에서 라디오 버튼으로 하나만 선택되게 하고, 네비게이션바가 이미지를 선택하는 역할-->
+            <ul class="slides">
+                <!--이미지중 하나는 선택된 상태-->
+                <input type="radio" name="radiobtn" id="img-1" checked>
+                <li class="slide-container">
+                    <!--액자 div-->
+                    <div class="slide">
+                        <img src="img/movie_cut1.JPG" alt="" />
+                    </div>
+                    <!--슬라이드 네비게이션바, 아스키코드로 작성 / lable태그 for에서 img아이디를 참조-->
+                    <div class="slide-nav">
+                        <label for="img-4" class="prev">&#x2039</label>
+                        <label for="img-2" class="next">&#x203a</label>
+                    </div>
+                </li>
+                <input type="radio" name="radiobtn" id="img-2">
+                <li class="slide-container">
+                    <div class="slide">
+                        <img src="img/movie_cut2.JPG" alt="" />
+                    </div>
+                    <div class="slide-nav">
+                        <label for="img-1" class="prev">&#x2039</label>
+                        <label for="img-3" class="next">&#x203a</label>
+                    </div>
+                </li>
+                <input type="radio" name="radiobtn" id="img-3">
+                <li class="slide-container">
+                    <div class="slide">
+                        <img src="img/movie_cut3.JPG" alt="" />
+                    </div>
+                    <div class="slide-nav">
+                        <label for="img-2" class="prev">&#x2039</label>
+                        <label for="img-4" class="next">&#x203a</label>
+                    </div>
+                </li>
+                <input type="radio" name="radiobtn" id="img-4">
+                <li class="slide-container">
+                    <div class="slide">
+                        <img src="img/movie_cut4.JPG" alt="" />
+                    </div>
+                    <div class="slide-nav">
+                        <label for="img-3" class="prev">&#x2039</label>
+                        <label for="img-1" class="next">&#x203a</label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 11. 영화 이벤트 -->
+        <div class="events">
+            <h2>영화 이벤트 목록</h2>
+            <a href="#"><img src="img/movie_event1.jpg" alt=""/></a>
+            <a href="#"><img src="img/movie_event2.jpg" alt=""/></a>
+            <a href="#"><img src="img/movie_event3.jpg" alt=""/></a>
+            <a href="#"><img src="img/movie_event4.jpg" alt=""/></a>
+        </div>
+
+        <!-- 12. 박스오피스 / 상영예정작 -->
+        <div></div>
+    </div>
     <div class="footer">
         <!--4. 바닥글 구성 -->
         <address>주식회사 남부발전센터 / 서울시 금천구 여기가 무슨동이지</address>
         <h4>대표이사: 현땡땡/ 사업자 등록 번호 : 123-45-67890/ 등록일자 2021년 06월 08일 / 편집인 현땡땡 / 발행일자 2021년 06월 08일<br>
-            <a href="mailto:a@outlook.com">메일보내기</a> /이 사이트의 모든 권리는 제작사에게 있습니다.</h4>
+            <a href="mailto:a@outlook.com">메일보내기</a> /이 사이트의 모든 권리는 제작사에게 있습니다.
+        </h4>
     </div>
 </body>
 
