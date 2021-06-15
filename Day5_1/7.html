@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>토글 바 버튼</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <style>
+            .container{
+                padding-top: 60px;
+            }
+        </style>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <script src="js/jquery-3.6.0.slim.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <nav class="navbar navbar-expand-lg bg-light navbar-light">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">SFMania</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active text-primary" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                            Star Wars
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Star Wars Episode I</a>
+                            <a class="dropdown-item" href="#">Star Wars Episode II</a>
+                            <a class="dropdown-item" href="#">Star Wars Episode III</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Star Wars Episode IV</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Star Trek</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Star Gate</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button>
+                </form>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action active">어벤저스:엔드게임</a>
+                        <a href="#" class="list-group-item list-group-item-action">알리타-배틀엔젤</a>
+                        <a href="#" class="list-group-item list-group-item-action">에드 아스트라</a>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <h1>Movie Overview</h1>
+                    <p>
+                        Star Wars is an American epic space-opera media franchise created by George Lucas. The franchise began with the eponymous 1977 film and quickly became a worldwide pop-culture phenomenon.
+                    </p>
+                    <p>
+                        The first film, later subtitled Episode IV – A New Hope, was followed by the sequels Episode V – The Empire Strikes Back (1980) and Episode VI – Return of the Jedi (1983), forming what is collectively referred to as the original trilogy. 
+                    </p>
+                    <p>
+                        A prequel trilogy was later released, consisting of Episode I – The Phantom Menace (1999), Episode II – Attack of the Clones (2002) and Episode III – Revenge of the Sith (2005). Finally, a sequel trilogy began with Episode VII – The Force Awakens (2015), continued with Episode VIII – The Last Jedi (2017), and will conclude with Episode IX – The Rise of Skywalker (2019).
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>
